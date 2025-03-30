@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Web Developer - Shammi Pandey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        /* Custom CSS for Shammi Pandey - Freelance Web Developer Website */
+
+        /* 1. General Styles */
+        body {
+            font-family: 'Inter', sans-serif; /* Modern font */
+            margin: 0;
+            color: #f9fafb; /* Off-white, for better contrast on dark backgrounds */
+            background-color: #111827; /* Very dark background */
+            line-height: 1.7;  /* Improved line height for readability */
+            scroll-behavior: smooth; /* Smooth scrolling for better UX */
+        }
+
+        section {
+            padding: 80px 0; /* Increased padding for spacious sections */
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px; /* Increased max-width for larger screens */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            font-weight: 700; /* Use 700 for bold headings */
+            color: #ffffff; /* White headings */
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #d1d5db; /* Slightly lighter text for paragraphs */
+        }
+
+        a {
+            color: #6ee7b7; /* Teal color for links */
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        a:hover {
+            color: #14b8a6; /* Darker teal on hover */
+        }
+
+        .btn {
+            display: inline-flex; /* Use inline-flex for better alignment */
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px; /* Increased padding */
+            font-size: 18px; /* Larger font size */
+            font-weight: 600; /* Use 600 for semi-bold buttons */
+            color: #ffffff;
+            background-color: #f59e0b; /* Amber button */
+            border-radius: 10px; /* More rounded corners */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #d97706; /* Darker amber on hover */
+            transform: translateY(-2px); /* Slight upward movement on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #f59e0b;
+            color: #f59e0b;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(251, 146, 60, 0.1); /* Light amber background on hover */
+            color: #f59e0b;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        /* 2. Hero Section Styles */
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh; /* Full viewport height */
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.9)), url('hero-background.jpg'); /* Darker overlay */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 0; /* Remove default padding */
+            position: relative; /* Needed for absolute positioning of overlay */
+        }
+
+        #hero h1 {
+            font-size: 48px; /* Larger heading */
+            font-weight: 700; /* Use 700 for the main heading */
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Stronger text shadow */
+        }
+
+        #hero p {
+            font-size: 20px; /* Increased font size */
+            color: #d1d5db;
+            margin-bottom: 30px;
+            max-width: 800px; /* Limit paragraph width */
+            line-height: 1.8;
+        }
+
+        /* 3. About Me Section Styles */
+        #about {
+            background-color: #1f2937; /* Slightly lighter background */
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px; /* Increased gap */
+        }
+
+        .about-image {
+            width: 400px; /* Increased image width */
+            height: auto;
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.04);
+        }
+
+        .about-text {
+            max-width: 600px; /* Limit text width */
+            text-align: left;
+        }
+         .about-text h2{
+            color: #ffffff;
+         }
+
+        /* 4. Services Section Styles */
+        #services {
+            background-color: #111827;
+        }
+
+        #services h2{
+            color:#ffffff;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 30px; /* Increased gap */
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: #1f2937; /* Lighter service cards */
+            padding: 30px; /* Increased padding */
+            border-radius: 15px; /* More rounded corners */
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+        }
+
+        .service-card:hover {
+            background-color: #374151; /* Slightly darker on hover */
+            transform: translateY(-5px); /* Move up on hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+        }
+
+        .service-card img { /* Targeting the service icon */
+            width: 80px; /* Increased icon size */
+            height: auto;
+            margin-bottom: 20px;
+            filter: brightness(100%) saturate(100%) contrast(100%); /* Ensure icon is not washed out*/
+        }
+
+        .service-card h3 {
+            font-size: 24px; /* Increased heading size */
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
+        /* 5. Portfolio Section Styles */
+        #portfolio {
+            background-color: #1f2937;
+        }
+        #portfolio h2{
+            color:#ffffff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 30px; /* Increased gap */
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            position: relative; /* For absolute positioning of overlay */
+            border-radius: 15px; /* More rounded corners */
+            overflow: hidden; /* Hide overflowing overlay */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover{
+             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* More rounded corners */
+            display: block; /* Ensure no extra space below image */
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(245, 158, 11, 0.9); /* Amber overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+            border-radius: 15px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            transform: translateY(-20px); /* Slide in from top */
+            transition: transform 0.3s ease;
+            opacity: 0;
+        }
+
+        .portfolio-item:hover .portfolio-overlay h3{
+             transform: translateY(0);
+             opacity: 1;
+        }
+
+        .portfolio-overlay p {
+            font-size: 18px;
+            color: #ffffff;
+            transform: translateY(20px); /* Slide in from bottom */
+            transition: transform 0.3s ease;
+            opacity: 0;
+        }
+        .portfolio-item:hover .portfolio-overlay p{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* 6. Pricing Plans Section Styles */
+        #pricing {
+            background-color: #111827;
+        }
+        #pricing h2{
+            color:#ffffff;
+        }
+
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 30px; /* Increased gap */
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background-color: #1f2937; /* Lighter pricing cards */
+            padding: 40px; /* Increased padding */
+            border-radius: 15px; /* More rounded corners */
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+        }
+
+        .pricing-card:hover {
+            background-color: #374151; /* Slightly darker on hover */
+            transform: translateY(-5px); /* Move up on hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Increased shadow */
+        }
+
+        .pricing-card h3 {
+            font-size: 28px; /* Increased heading size */
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .pricing-card h2 { /* Changed selector to target price */
+            font-size: 48px; /* Increased price size */
+            margin-bottom: 20px;
+            color: #f59e0b; /* Amber color for price */
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            color: #d1d5db;
+            line-height: 1.9; /* Increased line height */
+        }
+
+        .pricing-card li{
+            margin-bottom: 12px;
+        }
+
+        .pricing-card .btn {
+            width: 100%; /* Full width button */
+        }
+
+        /* 7. Testimonials Section Styles */
+        #testimonials {
+            background-color: #1f2937;
+        }
+        #testimonials h2{
+            color:#ffffff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: #2d3748;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card img {
+            width: 100px; /* Increased size */
+            height: 100px;
+            border-radius: 50%; /* Circular image */
+            margin: 0 auto 20px;
+            object-fit: cover;  /* Ensure image fills the circle */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #d1d5db;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .testimonial-card h4 {
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* 8. Contact Me Section Styles */
+        #contact {
+            background-color: #111827;
+        }
+        #contact h2{
+            color:#ffffff;
+        }
+
+        .contact-form {
+            background-color: #1f2937;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #4b5563;
+            background-color: #374151;
+            color: #ffffff;
+            font-size: 18px;
+            transition: border-color 0.2s ease;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.2);
+        }
+
+        .contact-form textarea {
+            height: 180px;
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+        }
+
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25d366; /* WhatsApp Green */
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            position: fixed; /* Fixed position */
+            bottom: 30px;
+            right: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1e8e51; /* Darker green on hover */
+            transform: scale(1.08); /* slight scale up */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 9. Footer Section Styles */
+        footer {
+            background-color: #0f172a; /* Very dark footer */
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer p {
+            color: #d1d5db;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 24px;
+        }
+
+        footer .social-icons a {
+            color: #d1d5db;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #ffffff;
+            transform: scale(1.2);
+        }
+
+        /* 10. Responsive Media Queries */
+
+        @media (max-width: 1024px) { /* Large tablets and smaller laptops */
+            .container {
+                max-width: 960px;
+            }
+
+            #hero h1 {
+                font-size: 42px;
+            }
+
+            #hero p {
+                font-size: 18px;
+            }
+
+            .about-image {
+                width: 350px;
+            }
+
+            .services-grid, .portfolio-grid, .pricing-table {
+                grid-template-columns: repeat(1, 1fr);
+            }
+             .contact-form{
+                padding: 30px;
+             }
+        }
+
+        @media (max-width: 768px) { /* Tablets */
+            .container {
+                max-width: 720px;
+            }
+
+            #hero h1 {
+                font-size: 36px;
+            }
+
+            #hero p {
+                font-size: 16px;
+            }
+           .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text{
+                text-align: center;
+            }
+
+            .about-image {
+                width: 300px;
+            }
+            .pricing-card{
+                padding: 30px;
+            }
+            .contact-form h3{
+                font-size: 24px;
+            }
+            footer p{
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) { /* Mobile devices */
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            #hero h1 {
+                font-size: 28px;
+            }
+
+            #hero p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            .about-image {
+                width: 90%;
+            }
+            .contact-form{
+                padding: 20px;
+            }
+            footer .social-icons{
+                gap: 15px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-transparent absolute top-0 left-0 w-full z-10">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Shammi Pandey</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover-underline-animation text-white">Home</a></li>
+                    <li><a href="#about" class="hover-underline-animation text-white">About Me</a></li>
+                    <li><a href="#services" class="hover-underline-animation text-white">Services</a></li>
+                    <li><a href="#portfolio" class="hover-underline-animation text-white">Portfolio</a></li>
+                    <li><a href="#pricing" class="hover-underline-animation text-white">Pricing</a></li>
+                    <li><a href="#testimonials" class="hover-underline-animation text-white">Testimonials</a></li>
+                    <li><a href="#contact" class="hover-underline-animation text-white">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block text-lg text-white hover:text-amber-400">Home</a></li>
+                    <li><a href="#about" class="block text-lg text-white hover:text-amber-400">About Me</a></li>
+                    <li><a href="#services" class="block text-lg text-white hover:text-amber-400">Services</a></li>
+                    <li><a href="#portfolio" class="block text-lg text-white hover:text-amber-400">Portfolio</a></li>
+                    <li><a href="#pricing" class="block text-lg text-white hover:text-amber-400">Pricing</a></li>
+                    <li><a href="#testimonials" class="block text-lg text-white hover:text-amber-400">Testimonials</a></li>
+                    <li><a href="#contact" class="block text-lg text-white hover:text-amber-400">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="container">
+            <h1>Transform Your Ideas into Stunning Websites!</h1>
+            <p>I am a web developer specializing in creating high-quality, visually appealing, and user-friendly websites.</p>
+            <a href="#contact" class="btn">Get a Quote</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <img src="about-me.jpg" alt="Shammi Pandey" class="about-image">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Shammi Pandey, a passionate freelance web developer based in Ara,Bihar. I have a strong background in web development, and I love turning complex ideas into beautiful and functional websites.</p>
+                    <p>I am proficient in HTML, CSS, JavaScript, and various modern frameworks. My goal is to provide my clients with top-notch web solutions that meet their specific needs and help them achieve their business objectives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="web-design-icon.svg" alt="Web Design">
+                    <h3>Web Design</h3>
+                    <p>I create visually appealing and user-friendly website designs that enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <img src="web-development-icon.svg" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>I develop robust and scalable websites using the latest technologies and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <img src="responsive-design-icon.svg" alt="Responsive Design">
+                    <h3>Responsive Design</h3>
+                    <p>I ensure your website looks great and functions perfectly on all devices, from desktops to smartphones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="portfolio-item1.jpg" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Project 1</h3>
+                        <p>E-commerce Website</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio-item2.jpg" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Project 2</h3>
+                        <p>Business Website</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio-item3.jpg" alt="Project 3">
+                     <div class="portfolio-overlay">
+                        <h3>Project 3</h3>
+                        <p>Personal Blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-table">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <h2>$99</h2>
+                    <ul>
+                        <li>5 Pages</li>
+                        <li>Responsive Design</li>
+                        <li>Basic SEO</li>
+                        <li>1 Month Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Standard</h3>
+                    <h2>$199</h2>
+                    <ul>
+                        <li>10 Pages</li>
+                        <li>Responsive Design</li>
+                        <li>Advanced SEO</li>
+                        <li>3 Months Support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <h2>$299</h2>
+                    <ul>
+                        <li>Unlimited Pages</li>
+                        <li>Responsive Design</li>
+                        <li>E-commerce Features</li>
+                        <li>6 Months Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="client1.jpg" alt="Client 1">
+                    <p>"Shammi did an amazing job on our website.  They were professional, responsive, and delivered a high-quality product."</p>
+                    <h4>Amit Roy</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="client2.jpg" alt="Client 2">
+                    <p>"I highly recommend Shammi for any web development project.  Their expertise and attention to detail are unmatched."</p>
+                    <h4>Khushi Singh</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+         <a href="https://wa.me/your-whatsapp-number" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 16.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.51 7.135" clip-rule="evenodd" />
+                <path d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
+            </svg>
+            WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shammi Pandey. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.234 0-1.481.77-1.481 1.563v1.921h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M18.244 2.25h3.308l-7.227 8.248V19.728h-3.411v-6.985l-5.338-5.443L.256 2.25h3.308l4.757 5.475L8 3.83c-1.652-2.177-3.81-3.708-6.6-3.708-.39 0-.775.025-1.15.074C.892 1.077 0 1.951 0 3.038v17.924a.94.94 0 0 0 1.876-.032c.191-2.071 1.09-3.723 2.488-5.04 3.415-3.68 6.866-4.415 10.234-4.415 3.297 0 6.254 1.115 8.55 2.965 1.185-.137 2.335-.384 3.422-.656 1.022-2.15 1.96-4.357 1.96-6.726 0-3.836-2.607-7.11-5.934-7.11z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M20 3h-16a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-16a1 1 0 0 0-1-1zM8.3 17h-2.3v-7h2.3v7zm-1.15-8.37a.75.75 0 0 1-.75-.75v-.01c0-.414.336-.75.75-.75s.75.336.75.75v.01a.75.75 0 0 1-.75.75zM17 17h-2.3v-3.15a1.86 1.86 0 0 0-.63-1.58c-.41-.39-.94-.59-1.5-.59a1.3 1.3 0 0 0-1.1.47h-.05v-5.22h2.3v3.2c.08.13.15.27.2.4a2.38 2.38 0 0 1 2.1-1.62h.04v-1.21s-.95-.03-1.78-.4c-2.13-1.03-2.98-2.69-2.98-5.16v-.05a2.91 2.91 0 0 1 2.64-2.88c2.16-.08 3.32 1.39 3.32 1.39v5.9h2.29v7z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+     <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('header nav a');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight= section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
